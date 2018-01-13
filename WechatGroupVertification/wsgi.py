@@ -15,6 +15,14 @@ framework.
 """
 import os
 
+from os.path import join, dirname, abspath
+
+#I added the following lines
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import sys
+sys.path.insert(0, PROJECT_DIR)
+#end
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "WechatGroupVertification.settings")
 
 # This application object is used by any WSGI server configured to use this
